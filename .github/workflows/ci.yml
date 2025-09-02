@@ -8,7 +8,7 @@ jobs:
       - name: Buildah Action
         uses: redhat-actions/buildah-build@v2
         with:
-          image: MyCustomAction
+          image: mycustomaction
           containerfiles: ./Containerfile
       - name: Run my own container action
         uses: ./
