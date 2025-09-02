@@ -5,6 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5.0.0
+      - name: Buildah Action
+        uses: redhat-actions/buildah-build@v2
+        with:
+          image: MyCustomAction
+          containerfiles: ./Containerfile
       - name: Run my own container action
         uses: ./
         with:
