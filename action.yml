@@ -1,4 +1,4 @@
-name: 'Docker Action Recipe'
+name: 'Container Action Recipe'
 description: 'Greet someone'
 inputs:
   who-to-greet:
@@ -7,6 +7,6 @@ inputs:
     default: 'World'
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'MyCustomAction'
   args:
     - ${{ inputs.who-to-greet }}
