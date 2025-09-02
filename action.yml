@@ -7,6 +7,6 @@ inputs:
     default: 'World'
 runs:
   using: 'docker'
-  image: 'Containerfile'
+  image: 'Dockerfile'
   args:
     - ${{ inputs.who-to-greet }}
