@@ -11,6 +11,9 @@ jobs:
           image: mycustomaction
           containerfiles: ./Containerfile
       - name: Run my own container action
+        id: my-action
         uses: ./
         with:
           who-to-greet: '@romulomf'
+      - name: Output the answer
+        run: echo "The answer is ${{ steps.my-action.outputs.answer }}"
